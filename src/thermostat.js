@@ -10,7 +10,7 @@ function Thermostat() {
   this.MAX_LIMIT_PSM_OFF = 32;
   this.MEDIUM_ENERGY_USAGE_LIMIT = 18;
   this.HIGH_ENERGY_USAGE_LIMIT = 25;
-  this.color;
+  this.usage;
 };
 
 Thermostat.prototype = {
@@ -55,13 +55,13 @@ Thermostat.prototype = {
     this._temp = this.DEFAULT_TEMPERATURE;
   },
 
-  color: function() {
+  getUsage: function() {
     if (this.getCurrentTemp() < this.MEDIUM_ENERGY_USAGE_LIMIT) {
-      this.color = 'green';
+      return this.usage = 'low-usage';
     } else if (this.getCurrentTemp() <= this.HIGH_ENERGY_USAGE_LIMIT) {
-        this.color = 'yellow';
+      return  this.usage = 'medium-usage';
       } else {
-        this.color = 'red';
+      return  this.usage = 'high-usage';
       }
   },
 

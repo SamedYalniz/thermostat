@@ -43,8 +43,8 @@ describe('Thermostat', function() {
       for (var i = 0; i < 4; i++) {
         thermostat.tempDown();
       }
-      thermostat.color();
-      expect(thermostat.color).toEqual('green');
+      thermostat.getUsage();
+      expect(thermostat.usage).toEqual('low-usage');
     })
 
   describe ("power saving mode is on", function () {
