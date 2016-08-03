@@ -2,30 +2,18 @@
 <head>
   <script src="src/thermostat.js"></script>
     <script src="lib/jQuery.js"></script>
+    <script src="lib/interface.js"></script>
   <title> Thermostat </title>
+  <style>
+    button {background: rgba(255,255,255,0);
+            border: 2px solid orange;
+            border-radius: 4px;
+            width: 100px;}
+    body {}
+    h1 {font-size: 26px;}
+  </style>
 </head>
 <body>
-  <script>
-  thermostat = new Thermostat();
-    $(document).ready(function() {
-        $("#up").click(function( event) {
-          thermostat.tempUp();
-          alert("The temperature is: " + thermostat.getCurrentTemp());
-        });
-        $("#down").click(function(event){
-          thermostat.tempDown();
-          alert("The temperature is: " + thermostat.getCurrentTemp());
-        });
-        $("#switchPSMOn").click(function(event) {
-          thermostat.switchPSMOn();
-          alert("Is the power saving mode on? " + thermostat.isPowerSavingModeOn());
-        })
-
-    })
-
-
-   </script>
-
 
   <button id="up">up</button>
   <button id="down">down</button>
@@ -33,7 +21,7 @@
   <button id="switchPSMOff">PSM: off</button>
   <button id="resetTemp"> reset </button>
 
-  <p>  Temperature <span id="temperature"> </span> </p>
+  <p> Temperature <span id="temperature"> </span> </p>
   <p> Power saving mode <span id="power-saving-status"></span> </p>
   <p> Color <span id="color"></span> </p>
 
