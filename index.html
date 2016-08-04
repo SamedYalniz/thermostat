@@ -1,9 +1,10 @@
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="css.css">
   <script src="src/thermostat.js"></script>
     <script src="lib/jQuery.js"></script>
     <script src="lib/interface.js"></script>
-  <title> Thermostat </title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/lumen/bootstrap.min.css" rel="stylesheet" integrity="sha384-mvYjhBJXQ9VlNETV/xXShy849GsBHnKzVVudnMOcWUVM/6Nd2ksj8VNng5f8ylyX" crossorigin="anonymous">  <title> Thermostat </title>
   <style>
 
 
@@ -11,21 +12,24 @@
 </head>
 <body>
 
-  <button id="up">up</button>
-  <button id="down">down</button>
-  <button id="switchPSMOn">PSM: on </button>
-  <button id="switchPSMOff">PSM: off</button>
-  <button id="resetTemp"> reset </button>
+  <button class="up" id="up"> + </button>
+  <button class="down" id="down"> - </button><br>
+  <!-- <button id="switchPSMOn">PSM: ON</button>
+  <button id="switchPSMOff">PSM: OFF</button><br> -->
+  <button class="btn btn-default disabled" id="resetTemp"> Reset </button>
 
-  <p> Temperature <span id="temperature"> </span> </p>
-  <p> Power saving mode <span id="power-saving-status"></span> </p>
-  <p id="color"> Color</p>
+  <p> THERMOSTAT TEMPERATURE: <span style="font-size: 40pt" id="temperature"> </span> DEGREES </p>
+  <p> Power saving mode: <span id="power-saving-status"></span> </p>
+  <button class="btn btn-success disabled" id="switchPSMOn">PSM: ON</button>
+  <button class="btn btn-warning disabled" id="switchPSMOff">PSM: OFF</button><br>
+  <div id="color"> Energy Consumption </div>
 
-  <p> Please put in your city </p>
+  <p> Please enter a city for current Temperature </p>
   <input type="text" id="chosencity">
-  <button id="getTemp"> get the temperature </button>
-  <p> Current temperature in <span id="city"> </span> Celsius </p>
+  <button id="getTemp"> Check Temperature </button>
+  <p> Current temperature in <span id="city"> </span> <span id="currentTemp"> </span> Celsius </p>
 
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 
 </html>
