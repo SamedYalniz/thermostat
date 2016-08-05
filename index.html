@@ -16,14 +16,19 @@
   <button class="down" id="down"> - </button><br>
   <!-- <button id="switchPSMOn">PSM: ON</button>
   <button id="switchPSMOff">PSM: OFF</button><br> -->
-  <button class="btn btn-default disabled" id="resetTemp"> Reset </button>
+  <button class="reset" id="resetTemp"> Reset </button>
 
-  <p> THERMOSTAT TEMPERATURE: <span style="font-size: 40pt" id="temperature"> </span> DEGREES </p>
-  <p> Power saving mode: <span id="power-saving-status"></span> </p>
-  <button class="btn btn-success disabled" id="switchPSMOn">PSM: ON</button>
-  <button class="btn btn-warning disabled" id="switchPSMOff">PSM: OFF</button><br>
+  <span style="font-size: 40pt" id="temperature"> </span>
+  <p id="PSMMODE"> POWER SAVING MODE: <span id="power-saving-status"></span> </p>
+  <label class="switch">
+  	<input class="switch-input" type="checkbox" />
+  	<span class="switch-label" data-on="On" data-off="Off"></span>
+  	<span class="switch-handle"></span>
+  </label>
+
   <div id="color"> Energy Consumption </div>
-
+  <div id="background">
+  </div>
   <p> Please enter a city for current Temperature </p>
   <input type="text" id="chosencity">
   <button id="getTemp"> Check Temperature </button>
