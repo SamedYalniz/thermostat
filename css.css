@@ -1,0 +1,42 @@
+.up{
+  border-radius: 50%;
+  vertical-align: middle;
+  text-align: center;
+  background-color: red;
+  width: 5%;
+  height: 5%;
+  color: black;
+  font-size: 20px;
+}
+
+.down{
+  border-radius: 50%;
+  vertical-align: middle;
+  text-align: center;
+  background-color: cyan;
+  width: 5%;
+  height: 5%;
+  color: black;
+  font-size: 20px;
+}
+.btn btn-default disabled{
+
+}
+.btn btn-success disabled{
+
+}
+.btn btn-warning disabled{
+
+}
+div{
+
+    height: 50px;
+    width: 50%;
+}
+.temp{
+  font-size: 100px;
+}
+body{
+  background-image: url(http://goo.gl/AnprLg);
+  background-size: cover;
+}
